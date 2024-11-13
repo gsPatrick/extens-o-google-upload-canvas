@@ -1,13 +1,16 @@
 {
     "version": 2,
-    "builds": [{
+    "builds": [
+      {
         "src": "proxy.mjs",
         "use": "@vercel/node"
-    }
+      }
     ],
     "routes": [
-        {
-            "src": "(.*)"
-        }
+      {
+        "src": "/(.*)",
+        "dest": "proxy.mjs"
+      }
     ]
-}
+  }
+  
